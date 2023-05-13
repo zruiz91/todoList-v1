@@ -10,23 +10,29 @@
 </head>
 
 <body>
+    <div class="box" id="heading">
+        <h1>
+            <%= kindOfDay %>
+        </h1>
+    </div>
 
-    <h1>
-        <%= kindOfDay %>
-    </h1>
 
-    <ul>
+    <div class="box">
         <% for(let i=0; i < newListItems.length; i++) { %>
-            <li>
-                <%= newListItems[i] %>
-            </li>
+            <div class="item">
+                <p>
+                    <%= newListItems[i] %>
+                </p>
+            </div>
             <% } %>
-    </ul>
 
-    <form class="" action="/" method="post">
-        <input type="text" name="newItem" placeholder="Add To Do!">
-        <button type="submit" name="button" title="add">Submit</button>
-    </form>
+
+                <form class="item" action="/" method="post">
+                    <input type="text" name="newItem" placeholder="New Item!" autocomplete="off">
+                    <button type="submit" name="button" title="add">+</button>
+                </form>
+    </div>
+
 
 </body>
 
