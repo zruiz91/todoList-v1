@@ -88,6 +88,10 @@ app.post("/work", function(req, res) {
     res.redirect("/work");
 });
 
+app.get("/about", function(req, res) {
+    res.render("about");
+});
+
 app.listen(process.env.PORT || 3000, function () {
     console.log('listening on 3000.');
 
